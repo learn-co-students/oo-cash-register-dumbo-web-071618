@@ -40,9 +40,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    temp_item = all_items.last
-    @total -= temp_item[temp_item.keys[0]]
-
+    @total -= all_items.last.values[0]
     all_items.pop
   end
 
